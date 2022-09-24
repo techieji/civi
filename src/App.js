@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import SidebarMap from './components/sidebar-map';
+import VisualizationMap from './components/visualization-map';
 
 function App() {
   return (
     <div className="App">
-      <SidebarMap/>
+      <VisualizationMap/>
     </div>
   );
 }
