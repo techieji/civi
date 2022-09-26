@@ -3,7 +3,7 @@ import Dropdown from './dropdown';
 import { getVariables, getMapTypes } from '../data/data-api';
 import ColorSelect from './color-select';
 
-export default class SidebarMap extends React.Component {
+export default class MapVisualization extends React.Component {
     state = {
         options: {
             mapType: "County", //County | District 
@@ -33,11 +33,10 @@ export default class SidebarMap extends React.Component {
     }
 
     render = () => {
-        console.log(this.state);
         return (
-            <div>
+            <div className="w-screen">
                 {/* Sidebar */}
-                <div className="h-screen w-1/5 bg-slate-100 shadow-lg">
+                <div className="h-screen w-1/5 bg-slate-300 shadow-lg">
                     <div>
                         <h1 className="text-2xl font-bold"> Map Display </h1> 
                         <Dropdown name="Map Type" options={getMapTypes()} ref={this.mapType}/>
